@@ -43,7 +43,7 @@ export default function Section({ type, scope, title, description, role, stack, 
     return (
         <div className="w-full bg-black max-w-6xl p-12 py-20 border-x border-b border-zinc-800 flex flex-col">
             <p className="text-zinc-500 text-xl mb-4">{type.toUpperCase()}&nbsp;&nbsp;•&nbsp;&nbsp;{scope.toUpperCase()}</p>
-            <h2 className="border-l-4 border-zinc-500 -ml-12 pl-10 text-5xl font-semibold text-zinc-400"><span style={{ color: accentColor }} className="font-bold">{title}.</span> {description}</h2>
+            <h2 style={{ borderLeft: `4px solid ${accentColor}` }} className="-ml-12 pl-10 text-5xl font-semibold text-zinc-400"><span style={{ color: accentColor }} className="font-bold">{title}.</span> {description}</h2>
             <EmblaCarousel slides={(slideRoot && slideCount) ? generateSlidePaths(slideRoot, slideCount) : ["placeholder.png"]} options={{}} />
             <div className="w-full flex flex-col md:flex-row gap-10">
                 <div className="max-w-sm text-zinc-400 text-2xl flex flex-col gap-8">
