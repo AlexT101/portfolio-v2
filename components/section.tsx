@@ -9,8 +9,8 @@ interface SectionProps {
     role: string;
     stack: string;
     purpose: string;
-    github: string;
-    githubLink: string;
+    github?: string;
+    githubLink?: string;
     fullDescription: string;
     slideRoot?: string;
     slideCount?: number;
@@ -50,7 +50,9 @@ export default function Section({ type, scope, title, description, role, stack, 
                     <p><span style={{ color: accentColor }} className="font-bold">Role.</span> {role}</p>
                     <p><span style={{ color: accentColor }} className="font-bold">Stack.</span> {stack}</p>
                     <p><span style={{ color: accentColor }} className="font-bold">Purpose.</span> {purpose}</p>
-                    <p><span style={{ color: accentColor }} className="font-bold">Github.</span> <a className="hover:underline" href={githubLink} target="_blank" rel="noopener noreferrer">{github}</a></p>
+                    {(github && githubLink) &&
+                        <p><span style={{ color: accentColor }} className="font-bold">Github.</span> <a className="hover:underline" href={githubLink} target="_blank" rel="noopener noreferrer">{github}</a></p>
+                    }
                 </div>
                 <div className="md:w-0 md:flex-1 text-zinc-400 text-lg leading-relaxed">{addLineBreak(fullDescription)}</div>
             </div>

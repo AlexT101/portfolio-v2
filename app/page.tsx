@@ -1,5 +1,6 @@
-import Header from '../components/header';
-import Section from '../components/section';
+import Footer from '@/components/footer';
+import Header from '@/components/header';
+import Section from '@/components/section';
 
 export default function Home() {
   return (
@@ -86,7 +87,7 @@ export default function Home() {
         accentColor="#3B5BDB"
       />
 
-<Section
+      <Section
         type="Team Project"
         scope="Full Stack"
         title="Wrapped"
@@ -118,6 +119,35 @@ export default function Home() {
         accentColor="#BDB2FF"
       />
 
+      <Section
+        type="Team Project"
+        scope="Design"
+        title="Skru"
+        description="Web-based, paletted pixel art editor."
+        slideRoot="skru"
+        slideCount={3}
+        role="Designer"
+        stack="Figma"
+        purpose="Web Dev Club"
+        fullDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        accentColor="#FFC000"
+      />
+
+<Section
+        type="Practice"
+        scope="Design"
+        title="Practice"
+        description="UI/UX mockup mini projects."
+        slideRoot="practice"
+        slideCount={2}
+        role="Designer"
+        stack="Adobe Illustrator"
+        purpose="Practice"
+        fullDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        accentColor="#ffffff"
+      />
+
+      <Footer />
     </main>
   );
 }
