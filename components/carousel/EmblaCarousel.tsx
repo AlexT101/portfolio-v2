@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
-import Thumb from './EmblaCarouselThumbsButton'
+import { useState, useEffect, useCallback, useRef } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Thumb from './EmblaCarouselThumbsButton';
 
 interface EmblaCarouselProps {
     slides: string[];
@@ -16,19 +16,20 @@ const EmblaCarousel = ({ slides, options }: EmblaCarouselProps) => {
         containScroll: 'keepSnaps',
         dragFree: true
     });
+    const emblaNodeRef = useRef<HTMLDivElement>(null);
 
     const onThumbClick = useCallback(
         (index: number) => {
-            if (!emblaMainApi || !emblaThumbsApi) return
-            emblaMainApi.scrollTo(index)
+            if (!emblaMainApi || !emblaThumbsApi) return;
+            emblaMainApi.scrollTo(index);
         },
         [emblaMainApi, emblaThumbsApi]
     );
 
     const onSelect = useCallback(() => {
-        if (!emblaMainApi || !emblaThumbsApi) return
-        setSelectedIndex(emblaMainApi.selectedScrollSnap())
-        emblaThumbsApi.scrollTo(emblaMainApi.selectedScrollSnap())
+        if (!emblaMainApi || !emblaThumbsApi) return;
+        setSelectedIndex(emblaMainApi.selectedScrollSnap());
+        emblaThumbsApi.scrollTo(emblaMainApi.selectedScrollSnap());
     }, [emblaMainApi, emblaThumbsApi, setSelectedIndex]);
 
     useEffect(() => {
@@ -38,8 +39,31 @@ const EmblaCarousel = ({ slides, options }: EmblaCarouselProps) => {
         emblaMainApi.on('select', onSelect).on('reInit', onSelect);
     }, [emblaMainApi, onSelect]);
 
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (!emblaMainApi) return;
+
+            if (event.key === 'ArrowLeft') {
+                emblaMainApi.scrollPrev();
+            } else if (event.key === 'ArrowRight') {
+                emblaMainApi.scrollNext();
+            }
+        };
+
+        const emblaNode = emblaNodeRef.current;
+        if (emblaNode) {
+            emblaNode.addEventListener('keydown', handleKeyDown);
+        }
+
+        return () => {
+            if (emblaNode) {
+                emblaNode.removeEventListener('keydown', handleKeyDown);
+            }
+        };
+    }, [emblaMainApi]);
+
     return (
-        <div className="embla">
+        <div className="embla" ref={emblaNodeRef} tabIndex={0}>
             <div className="embla__viewport" ref={emblaMainRef}>
                 <div className="embla__container">
                     {slides.map((image: string, index: number) => (
@@ -66,7 +90,7 @@ const EmblaCarousel = ({ slides, options }: EmblaCarouselProps) => {
                 </div>
             }
         </div>
-    )
-}
+    );
+};
 
-export default EmblaCarousel
+export default EmblaCarousel;

@@ -6,6 +6,10 @@
     --slide-spacing: 1rem;
 }
 
+.embla:focus {
+    outline: none;
+}
+
 .embla__viewport {
     overflow: hidden;
 }
@@ -42,6 +46,10 @@
     flex: 0 0 22%;
     min-width: 0;
     margin-left: var(--thumbs-slide-spacing);
+}
+
+.embla-thumbs__slide button:focus {
+    outline: none;
 }
 
 .embla-thumbs__slide button {

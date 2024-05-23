@@ -33,13 +33,15 @@ interface SectionProps {
     purpose: string;
     github?: string;
     githubLink?: string;
+    site?: string;
+    siteLink?: string;
     fullDescription: string;
     root?: string;
     slideCount?: number;
     accentColor: string;
 }
 
-export default function Section({ type, scope, title, description, role, stack, purpose, github, githubLink, fullDescription, root, slideCount, accentColor }: SectionProps) {
+export default function Section({ type, scope, title, description, role, stack, purpose, github, githubLink, site, siteLink, fullDescription, root, slideCount, accentColor }: SectionProps) {
     return (
         <section id={root} className="w-full bg-black max-w-6xl p-6 sm:p-12 py-12 sm:py-20 border-x border-b border-zinc-800 flex flex-col">
             <p className="text-[#898992] text-lg sm:text-xl mb-4">
@@ -59,6 +61,9 @@ export default function Section({ type, scope, title, description, role, stack, 
                     <p><span style={{ color: accentColor }} className="font-bold">Purpose:</span> {purpose}</p>
                     {(github && githubLink) &&
                         <p><span style={{ color: accentColor }} className="font-bold">Github:</span> <a className="hover:underline" href={githubLink} target="_blank" rel="noopener noreferrer">{github}</a></p>
+                    }
+                    {(site && siteLink) &&
+                        <p><span style={{ color: accentColor }} className="font-bold">Site:</span> <a className="hover:underline" href={siteLink} target="_blank" rel="noopener noreferrer">{site}</a></p>
                     }
                 </div>
                 <div className="md:w-0 md:flex-1 text-zinc-400 text-base sm:text-lg leading-relaxed">{addLineBreak(fullDescription)}</div>
