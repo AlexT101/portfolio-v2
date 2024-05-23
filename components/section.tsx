@@ -34,14 +34,14 @@ interface SectionProps {
     github?: string;
     githubLink?: string;
     fullDescription: string;
-    slideRoot?: string;
+    root?: string;
     slideCount?: number;
     accentColor: string;
 }
 
-export default function Section({ type, scope, title, description, role, stack, purpose, github, githubLink, fullDescription, slideRoot, slideCount, accentColor }: SectionProps) {
+export default function Section({ type, scope, title, description, role, stack, purpose, github, githubLink, fullDescription, root, slideCount, accentColor }: SectionProps) {
     return (
-        <section className="w-full bg-black max-w-6xl p-6 sm:p-12 py-12 sm:py-20 border-x border-b border-zinc-800 flex flex-col">
+        <section id={root} className="w-full bg-black max-w-6xl p-6 sm:p-12 py-12 sm:py-20 border-x border-b border-zinc-800 flex flex-col">
             <p className="text-[#898992] text-lg sm:text-xl mb-4">
                 <span className="block sm:inline uppercase">{type}</span>
                 <span className="hidden sm:inline">&nbsp;&nbsp;•&nbsp;&nbsp;</span>
@@ -51,7 +51,7 @@ export default function Section({ type, scope, title, description, role, stack, 
                 <span style={{ color: accentColor }} className="font-bold">{title}. </span>
                 <span className="block sm:inline">{description}</span>
             </h2>
-            <EmblaCarousel slides={(slideRoot && slideCount) ? generateSlidePaths(slideRoot, slideCount) : ["placeholder.png"]} options={{}} />
+            <EmblaCarousel slides={(root && slideCount) ? generateSlidePaths(root, slideCount) : ["placeholder.png"]} options={{}} />
             <div className="w-full flex flex-col md:flex-row gap-10">
                 <div className="max-w-sm text-zinc-400 text-xl sm:text-2xl flex flex-col gap-8">
                     <p><span style={{ color: accentColor }} className="font-bold">Role:</span> {role}</p>
