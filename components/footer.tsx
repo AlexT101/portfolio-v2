@@ -1,8 +1,8 @@
 export default function Footer() {
     return (
         <footer className="w-full bg-zinc-950 max-w-6xl p-6 sm:p-12 border-x border-b border-zinc-800 flex items-center justify-center text-center">
-            <p className="text-zinc-500 text-lg sm:text-xl">
-                <span className="block sm:inline">© {new Date().getFullYear()} Alex Thummalapalli.</span>
+            <p className="text-[#898992] text-lg sm:text-xl">
+                <span className="block sm:inline">© {new Date().getFullYear()} Alex Thummalapalli. </span>
                 <span className="block sm:inline">All rights reserved.</span>
             </p>
         </footer>

@@ -1,22 +1,6 @@
 import EmblaCarousel from './carousel/EmblaCarousel';
 import '../components/carousel/embla.css';
 
-interface SectionProps {
-    type: string;
-    scope: string;
-    title: string;
-    description: string;
-    role: string;
-    stack: string;
-    purpose: string;
-    github?: string;
-    githubLink?: string;
-    fullDescription: string;
-    slideRoot?: string;
-    slideCount?: number;
-    accentColor: string;
-}
-
 //Function to add line breaks to the fullDescription string at \n
 function addLineBreak(str: string) {
     return str.split("\\n").map((substring, index) => {
@@ -39,13 +23,29 @@ function generateSlidePaths(slideRoot: string, slideCount: number): string[] {
     return slidePaths;
 }
 
+interface SectionProps {
+    type: string;
+    scope: string;
+    title: string;
+    description: string;
+    role: string;
+    stack: string;
+    purpose: string;
+    github?: string;
+    githubLink?: string;
+    fullDescription: string;
+    slideRoot?: string;
+    slideCount?: number;
+    accentColor: string;
+}
+
 export default function Section({ type, scope, title, description, role, stack, purpose, github, githubLink, fullDescription, slideRoot, slideCount, accentColor }: SectionProps) {
     return (
-        <div className="w-full bg-black max-w-6xl p-6 sm:p-12 py-12 sm:py-20 border-x border-b border-zinc-800 flex flex-col">
-            <p className="text-zinc-500 text-lg sm:text-xl mb-4">
-                <span className="block sm:inline">{type.toUpperCase()}</span>
+        <section className="w-full bg-black max-w-6xl p-6 sm:p-12 py-12 sm:py-20 border-x border-b border-zinc-800 flex flex-col">
+            <p className="text-[#898992] text-lg sm:text-xl mb-4">
+                <span className="block sm:inline uppercase">{type}</span>
                 <span className="hidden sm:inline">&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-                <span className="block sm:inline">{scope.toUpperCase()}</span>
+                <span className="block sm:inline uppercase">{scope}</span>
             </p>
             <h2 style={{ borderLeft: `4px solid ${accentColor}` }} className="-ml-6 sm:-ml-12 pl-4 sm:pl-10 text-3xl sm:text-5xl font-semibold text-zinc-400">
                 <span style={{ color: accentColor }} className="font-bold">{title}. </span>
@@ -63,6 +63,6 @@ export default function Section({ type, scope, title, description, role, stack, 
                 </div>
                 <div className="md:w-0 md:flex-1 text-zinc-400 text-base sm:text-lg leading-relaxed">{addLineBreak(fullDescription)}</div>
             </div>
-        </div>
+        </section>
     );
 }

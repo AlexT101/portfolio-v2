@@ -3,7 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL('https://alext.app/'),
   title: "AlexT Portfolio",
   description: "CS student at Georgia Tech who enjoys design and development.",
@@ -25,7 +25,11 @@ export default function RootLayout({
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

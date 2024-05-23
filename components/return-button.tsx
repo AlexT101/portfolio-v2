@@ -14,7 +14,6 @@ export default function ReturnButton() {
         window.addEventListener('scroll', handleDocumentChange);
         window.addEventListener('resize', handleDocumentChange);
 
-        // Initial check
         handleDocumentChange();
 
         return () => {
