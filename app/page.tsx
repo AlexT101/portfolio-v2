@@ -1,6 +1,7 @@
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import Section from '@/components/section';
+import ReturnButton from '@/components/return-button';
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         type="Personal Project"
         scope="Full Stack"
         title="Musicharts"
-        description="Tune into your favorite music with interactive charts and detailed stats, built using Spotify streaming data."
+        description="Tune into your favorite music with interactive charts and detailed stats."
         slideRoot="musicharts"
         slideCount={11}
         role="Full-Stack Developer"
@@ -148,6 +149,7 @@ export default function Home() {
       />
 
       <Footer />
+      <ReturnButton />
     </main>
   );
 }

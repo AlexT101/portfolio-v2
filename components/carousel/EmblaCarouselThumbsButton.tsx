@@ -1,21 +1,16 @@
 'use client';
 
-export const Thumb = (props: any) => {
-    const { selected, image, onClick } = props
+interface ThumbProps {
+    selected: boolean;
+    image: string;
+    onClick: () => void;
+}
 
+export default function Thumb({ selected, image, onClick }: ThumbProps) {
     return (
-        <div
-            className={'embla-thumbs__slide'.concat(
-                selected ? ' embla-thumbs__slide--selected' : ''
-            )}
-        >
-            <button
-                onClick={onClick}
-                type="button"
-             
-            >
-                        <img src={image} className="w-full" />
-
+        <div className={`embla-thumbs__slide ${selected ? ' embla-thumbs__slide--selected' : ''}`}>
+            <button onClick={onClick}>
+                <img src={image} />
             </button>
         </div>
     )
