@@ -138,11 +138,11 @@ export default function Home() {
         title="Practice"
         description="UI/UX mockup mini projects."
         root="practice"
-        slideCount={2}
+        slideCount={3}
         role="Designer"
         stack="Adobe Illustrator"
         purpose="Practice"
-        fullDescription="Lifts (image 1) is a UI/UX mockup for a mobile app that lets bodybuilders and powerlifters track their fitness journey. Users can start a workout and log individual lifts, such as bench press or deadlift, to track their numbers and progress over time. \nAgent (image 2) is a UI/UX mockup for an informational webpage for the game Valorant. I am not affiliated with Riot/Valorant, but I wanted to practice working with their design style of utilitarian, yet clean and appealing, graphics. The current page displays information about Sova, an agent in the game. I used official Valorant assets, as well their current website’s color scheme and similar fonts, to experiment with their design style."
+        fullDescription="Lifts (image 1) is a UI/UX mockup for a mobile app that lets bodybuilders and powerlifters track their fitness journey. Users can start a workout and log individual lifts, such as bench press or deadlift, to track their numbers and progress over time. \nAgent (image 2) is a UI/UX mockup for an informational webpage for the game Valorant. I am not affiliated with Riot/Valorant, but I wanted to practice working with their design style of utilitarian, yet clean and appealing, graphics. I used official Valorant assets, as well their current website’s color scheme and similar fonts, to experiment with their design style. \nLink in Bio (image 3) was an experiment to design a link in bio website for myself to share important links using HTML/CSS."
         accentColor="#ffffff"
       />
 
