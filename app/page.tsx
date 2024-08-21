@@ -22,6 +22,22 @@ export default function Home() {
         accentColor="#6366f1"
       />
 
+<Section
+        type="Team Project"
+        scope="Frontend"
+        title="GTXR"
+        description="Landing page for the Georgia Tech Extended Reality (GTXR) Club."
+        root="gtxr"
+        slideCount={6}
+        role="Frontend Developer"
+        stack="Next.js, React, Typescript, HTML, Tailwind, CSS"
+        purpose="GTXR Club"
+        site="gtxr.club"
+        siteLink="https://gtxr.club"
+        fullDescription="I worked with one other person to build the website for the Georgia Tech Extended Reality Club. My role was to design and develop the landing page - I wanted the page to feel very modern and fluid to fit with the club's focus on the latest XR technologies. I added several subtle gradients and animations to bring the page together."
+        accentColor="#ae7ee0"
+      />
+
       <Section
         type="Team Project"
         scope="Full Stack"
