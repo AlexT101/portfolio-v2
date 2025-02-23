@@ -18,6 +18,8 @@ export default function Home() {
         role="Full-Stack Developer"
         stack="Next.js, React, Typescript, HTML, Tailwind, CSS, Supabase, Spotify Web API, Shadcn UI"
         purpose="Personal Project"
+        site="musicharts.app"
+        siteLink="https://www.musicharts.app/"
         fullDescription="As someone who loves listening to music, I built Musicharts to let Spotify users gain deep insights into their listening habits. After uploading their Extended Streaming History, a .json data dump provided by Spotify, users can see a comprehensive analysis of their listening patterns in a dashboard overview, or opt instead to look at detailed statistics and charts for any chosen track, album, or artist. Users can even go back in time using the recap feature to see their past listening sessions. \nMusicharts leverages the Spotify Web API to fetch up-to-date metadata on listened music, which is stored locally for fast access. The API also enables a music discovery page that provides tailor-made recommendations based on user-chosen personal preferences and music favorites."
         accentColor="#6366f1"
       />
