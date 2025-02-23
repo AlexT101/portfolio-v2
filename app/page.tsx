@@ -24,6 +24,24 @@ export default function Home() {
 
 <Section
         type="Team Project"
+        scope="Full Stack"
+        title="PrivacyPilot"
+        description="Chrome extension to find and analyze legal agreements for you."
+        root="privacypilot"
+        slideCount={1}
+        role="Frontend Developer"
+        stack="Vite, React, Typescript, HTML, CSS"
+        purpose="Hackathon"
+        github="/privacy-pilot"
+        githubLink="https://github.com/alext101/privacy-pilot"
+        site="devpost.com"
+        siteLink="https://devpost.com/software/privacy-extension-your-privacy-rights-at-a-glance"
+        fullDescription="I collaborated with three teammates to develop PrivacyPilot at AI ATL 2024, a 36-hour hackathon at Georgia Tech. PrivacyPilot is a Chrome extension that simplifies online privacy by quickly analyzing and summarizing website privacy policies. Frustrated by the complexity of most Terms & Conditions, we built a tool that scrapes relevant legal pages, evaluates privacy risks using AI, and presents users with clear, actionable insights in a sidebar.\nI focused on frontend development, including setting up the Vite/React project, implementing link scraping and filtering, integrating API calls to the backend, and designing the user interface to display privacy scores, along with relevant quotes from the target website to support each score. Our tool leverages AI-driven analysis to compare policies against GDPR and CCPA standards, helping users quickly assess their rights and risks. \nOur team won the Google Cloud - Overall and Best Use of MongoDB prizes at AI ATL."
+        accentColor="#4f81ff"
+      />
+
+<Section
+        type="Team Project"
         scope="Frontend"
         title="GTXR"
         description="Landing page for the Georgia Tech Extended Reality (GTXR) Club."
