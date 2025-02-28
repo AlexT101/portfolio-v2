@@ -68,8 +68,6 @@ export default function Home() {
         role="Full-Stack Developer, Designer"
         stack="Next.js, React, Typescript, HTML, CSS, Supabase, Mantine, Redux"
         purpose="GTXR Club"
-        site="immersegt.io"
-        siteLink="https://immersegt.io"
         fullDescription="I designed and led the development of a website to help the GTXR club run the ImmerseGT hackathon. The platform has a landing page with details about the event as well as a registration portal, which facilitated over 200 signups. The website also had partial functionality for a team formation tool which would help organize the team finding process during the hackathon, by letting users create teams and search for open teams to join. \nUnfortunately the hackathon could not be held during the 2024 hackathon season due to logistics issues, but with a planned return next year, the platform will likely be fully finished and ready for extended use soon."
         accentColor="#CC5DE8"
       />
