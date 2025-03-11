@@ -27,6 +27,22 @@ export default function Home() {
 <Section
         type="Team Project"
         scope="Full Stack"
+        title="ByteFight"
+        description="Code an AI bot to battle players in hourly, turn-based matches."
+        root="bytefight"
+        slideCount={5}
+        role="Frontend Developer"
+        stack="Next.js, React, Typescript, HTML, Tailwind, CSS, Framer Motion"
+        purpose="ByteFight Club"
+        site="bytefight.org"
+        siteLink="https://bytefight.org/"
+        fullDescription="ByteFight is a month-long tournament that was created at Georgia Tech to help students practice writing AI algorithms. Participants code an AI bot that competes in a short mini-game against other bots, with the goal of gaining ELO and climbing to the top of a leaderboard. As part of the team that created ByteFight, I was responsible for designing and coding the frontend landing page.\nMy goal was to design a modern, responsive landing page using Next.js, React, Typescript, and Tailwind. I focused on developing cohesive visuals and animations to make the page as engaging as possible, with the goal of recruiting new players to participate in the game."
+        accentColor="#FBBF24"
+      />
+
+<Section
+        type="Team Project"
+        scope="Full Stack"
         title="PrivacyPilot"
         description="Chrome extension to find and analyze legal agreements for you."
         root="privacypilot"
@@ -68,7 +84,7 @@ export default function Home() {
         role="Full-Stack Developer, Designer"
         stack="Next.js, React, Typescript, HTML, CSS, Supabase, Mantine, Redux"
         purpose="GTXR Club"
-        fullDescription="I designed and led the development of a website to help the GTXR club run the ImmerseGT hackathon. The platform has a landing page with details about the event as well as a registration portal, which facilitated over 200 signups. The website also had partial functionality for a team formation tool which would help organize the team finding process during the hackathon, by letting users create teams and search for open teams to join. \nUnfortunately the hackathon could not be held during the 2024 hackathon season due to logistics issues, but with a planned return next year, the platform will likely be fully finished and ready for extended use soon."
+        fullDescription="I designed and led the development of a website to help the GTXR club run the 2024 ImmerseGT hackathon. The platform had a landing page with details about the event as well as a registration portal, which facilitated over 200 signups. The website also had partial functionality for a team formation tool which would help organize the team finding process during the hackathon, by letting users create teams and search for open teams to join. \nUnfortunately the hackathon could not be held during the 2024 hackathon season due to logistics issues, but the ImmerseGT 2024 website gained over 7,000 views and 200 signups while it was live."
         accentColor="#CC5DE8"
       />
 
