@@ -30,13 +30,13 @@ export default function Home() {
         title="ByteFight"
         description="Code an AI bot to battle players in hourly, turn-based matches."
         root="bytefight"
-        slideCount={5}
+        slideCount={8}
         role="Frontend Developer"
         stack="Next.js, React, Typescript, HTML, Tailwind, CSS, Framer Motion"
         purpose="ByteFight Club"
         site="bytefight.org"
         siteLink="https://bytefight.org/"
-        fullDescription="ByteFight is a month-long tournament that was created at Georgia Tech to help students practice writing AI algorithms. Participants code an AI bot that competes in a short mini-game against other bots, with the goal of gaining ELO and climbing to the top of a leaderboard. As part of the team that created ByteFight, I was responsible for designing and coding the frontend landing page.\nMy goal was to design a modern, responsive landing page using Next.js, React, Typescript, and Tailwind. I focused on developing cohesive visuals and animations to make the page as engaging as possible, with the goal of recruiting new players to participate in the game."
+        fullDescription="ByteFight is a month-long tournament that was created at Georgia Tech to help students practice writing AI algorithms. Participants code an AI bot that competes in a short mini-game against other bots, with the goal of gaining ELO and climbing to the top of a leaderboard.\nAs part of the team that created ByteFight, I was responsible for designing and coding the frontend landing page. My goal was to design a modern, responsive landing page using Next.js, React, Typescript, and Tailwind. I focused on developing cohesive visuals and animations to make the page as engaging as possible, with the goal of recruiting new players to participate in the game.\nAdditionally, I redesigned the downloadable frontend client, which was built with Electron and allows for users to run matches locally, watch replays, and design maps. This was a complete UI overhaul, and I coded all the interface changes to improve visual appeal and the user experience while maintaining the core underlying logic other team members had established."
         accentColor="#FBBF24"
       />
 
