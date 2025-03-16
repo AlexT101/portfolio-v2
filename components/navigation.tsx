@@ -10,6 +10,7 @@ interface NavigationProps {
 export default function Navigation({ projects }: NavigationProps) {
     const [activeProject, setActiveProject] = useState<string | null>(null);
     const [isVisible, setIsVisible] = useState(false);
+    const [showTooltip, setShowTooltip] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,6 +32,7 @@ export default function Navigation({ projects }: NavigationProps) {
 
         const handleResize = () => {
             setIsVisible(window.innerWidth > 1360);
+            setShowTooltip(window.innerWidth > 1460);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -57,7 +59,7 @@ export default function Navigation({ projects }: NavigationProps) {
         <div
             className={`fixed left-5 top-1/2 transform -translate-y-1/2 flex flex-col gap-1 z-50 transition-opacity duration-200  ${isVisible ? 'block' : 'hidden'}`}
         >
-            {projects.map(({ root, title, accentColor, altTooltip }) => (
+            {isVisible && projects.map(({ root, title, accentColor, altTooltip }) => (
                 <NavDot
                     key={root}
                     root={root}
@@ -65,6 +67,7 @@ export default function Navigation({ projects }: NavigationProps) {
                     accentColor={accentColor}
                     isActive={root === activeProject}
                     scrollToSection={scrollToSection}
+                    showTooltip={showTooltip}
                 />
             ))}
         </div>

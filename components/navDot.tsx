@@ -6,12 +6,13 @@ interface NavDotProps {
     accentColor: string;
     isActive: boolean;
     scrollToSection: (id: string) => void;
+    showTooltip?: boolean;
 }
 
-export default function NavDot({ root, title, accentColor, isActive, scrollToSection }: NavDotProps) {
+export default function NavDot({ root, title, accentColor, isActive, scrollToSection, showTooltip }: NavDotProps) {
     return (
         <TooltipProvider delayDuration={0}>
-            <Tooltip open={isActive || undefined} onOpenChange={(open) => !isActive && open}>
+            <Tooltip open={showTooltip && (isActive || undefined)} onOpenChange={(open) => !isActive && open}>
                 <TooltipTrigger
                     className="group p-2"
                     onClick={() => scrollToSection(root)}
