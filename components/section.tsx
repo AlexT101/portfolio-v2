@@ -44,10 +44,8 @@ interface SectionProps {
 export default function Section({ type, scope, title, description, role, stack, purpose, github, githubLink, site, siteLink, fullDescription, root, slideCount, accentColor }: SectionProps) {
     return (
         <section id={root} className="w-full bg-black max-w-6xl p-6 sm:p-12 py-12 sm:py-20 border-x border-b border-zinc-800 flex flex-col">
-            <p className="text-[#898992] text-lg sm:text-xl mb-4">
-                <span className="block sm:inline uppercase">{type}</span>
-                <span className="hidden sm:inline">&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-                <span className="block sm:inline uppercase">{scope}</span>
+            <p className="text-[#898992] text-md sm:text-lg md:text-xl mb-4 uppercase">
+                {type} &nbsp;•&nbsp; {scope}
             </p>
             <h2 style={{ borderLeft: `4px solid ${accentColor}` }} className="-ml-6 sm:-ml-12 pl-4 sm:pl-10 text-3xl sm:text-5xl font-semibold text-zinc-400">
                 <span style={{ color: accentColor }} className="font-bold">{title}. </span>

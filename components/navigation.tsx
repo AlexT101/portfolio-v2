@@ -16,12 +16,13 @@ export default function Navigation({ projects }: NavigationProps) {
         const handleScroll = () => {
             let lastPassedProject: string | null = null;
 
-            projects.forEach(({ root }) => {
+            projects.forEach(({ root }, index) => {
                 const section = document.getElementById(root);
                 if (section) {
                     const rect = section.getBoundingClientRect();
-
-                    if (rect.top <= 50) {
+                    const threshold = index === 0 ? 200 : window.innerHeight / 2;
+                    
+                    if (rect.top <= threshold) {
                         lastPassedProject = root;
                     }
                 }
