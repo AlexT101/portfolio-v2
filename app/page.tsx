@@ -1,8 +1,9 @@
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import Section from '@/components/section';
-import ReturnButton from '@/components/return-button';
+import ReturnButton from '@/components/returnButton';
 import { projects } from "@/data/projects";
+import Navigation from "@/components/navigation";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       ))}
 
       <Footer />
+      <Navigation projects={projects} />
       <ReturnButton />
     </main>
   );

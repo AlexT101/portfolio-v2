@@ -147,7 +147,8 @@ export const projects = [
         github: "/college-scheduler",
         githubLink: "https://github.com/alext101/college-scheduler",
         fullDescription: "I worked with 2 people to create the College Scheduler Android app for the CS2340 class. The app lets students add their classes, assignments, exams, and upcoming tasks to a visual list view. There is also functionality for sorting and filtering items. This project was a practice assignment, so there is no backend functionality for user accounts or storing their inputted data.",
-        accentColor: "#BDB2FF"
+        accentColor: "#BDB2FF",
+        altTooltip: "Scheduler"
     },
     {
         type: "Team Project",

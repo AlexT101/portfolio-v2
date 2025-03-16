@@ -28,8 +28,7 @@ export default function ReturnButton() {
 
     return (
         <button
-            className={`fixed bottom-5 right-5 p-3 rounded-full bg-zinc-950 border-2 border-zinc-700 hover:bg-zinc-900 hover:border-zinc-600 flex items-center justify-center w-16 h-16 transition-opacity duration-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-            style={{ pointerEvents: isVisible ? 'auto' : 'none' }}
+            className={`fixed bottom-5 right-5 p-3 rounded-full bg-zinc-950 border-2 border-zinc-700 hover:bg-zinc-900 hover:border-zinc-600 flex items-center justify-center w-16 h-16 transition-opacity duration-200 ${isVisible ? 'block' : 'hidden'}`}
             onClick={scrollToTop}
         >
             <img src="/arrow-up.svg" alt="Return to top" className="fill-zinc-50" />
