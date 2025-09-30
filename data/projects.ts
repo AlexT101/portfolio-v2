@@ -29,6 +29,21 @@ export const projects = [
         fullDescription: "ByteFight is a month-long tournament that was created at Georgia Tech to help students practice writing AI algorithms. Participants code an AI bot that competes in a short mini-game against other bots, with the goal of gaining ELO and climbing to the top of a leaderboard.\nAs part of the team that created ByteFight, I was responsible for designing and coding the frontend landing page. My goal was to design a modern, responsive landing page using Next.js, React, Typescript, and Tailwind. I focused on developing cohesive visuals and animations to make the page as engaging as possible, with the goal of recruiting new players to participate in the game.\nAdditionally, I redesigned the downloadable frontend client, which was built with Electron and allows for users to run matches locally, watch replays, and design maps. This was a complete UI overhaul, and I coded all the interface changes to improve visual appeal and the user experience while maintaining the core underlying logic other team members had established.",
         accentColor: "#FBBF24"
     },
+        {
+        type: "Team Project",
+        scope: "Full Stack",
+        title: "Rexbets",
+        description: "High frequency betting for live sports matches, with friends.",
+        root: "rexbets",
+        slideCount: 5,
+        role: "Frontend Developer",
+        stack: "React Native, Expo, Typescript, HTML, CSS, Nativewind, Supabase",
+        purpose: "Hackathon",
+        site: "github.com",
+        siteLink: "https://github.com/id-mustafa/rexbets/",
+        fullDescription: "RexBets is a social betting app that brings competitive wagering to friend groups through real-time question-based betting sessions. Players join lobbies, answer rapid-fire questions about a live sports match, and compete for points. RexBets was built as part of a team of 4 for HackGT 12, a hackathon held at Georgia Tech. As the lead frontend developer for the project, my goal with RexBets was to create an intuitive, fun, and seamless application. RexBets is designed to engage the user with a responsive experience featuring animations, phone haptics during minigames, and real-time social functionality for joining lobbies and competing against your friends. I designed and developed almost all of the key app screens and worked to integrate these pages with data from the backend.",
+        accentColor: "#CBA6F6"
+    },
     {
         type: "Team Project",
         scope: "Full Stack",
