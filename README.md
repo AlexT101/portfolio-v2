@@ -1,9 +1,10 @@
 # Portfolio
 
-This is my portfolio website, built using React.
+This is my portfolio website, showcasing my frontend projects for hackathons, clubs, and other interests.
 
 ## Technologies Used
 - React
+- TypeScript
 - HTML
 - CSS
 
