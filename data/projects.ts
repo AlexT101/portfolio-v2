@@ -101,7 +101,7 @@ export const projects = [
         purpose: "Hackathon",
         github: "/green-journal",
         githubLink: "https://github.com/barrosodavid/greenjournal",
-        fullDescription: "I worked with 3 people to create GreenJournal for a 36 hour hackathon, HackGT X, held at Georgia Tech. Our goal was to devise an easy, visual, and interactive way for people to track their impact on the environment through their carbon footprint. We did this with procedures and data we found on the Environmental Protection Agency website, which we used to calculate each of the top factors that affect one’s carbon footprint. \nI was responsible for designing the initial wireframe layout and working on various parts of the user interface. I also handled user input by creating input fields using the NextUI component library and writing the algorithms necessary to calculate the carbon footprint. One of our team members designed the globe in Blender and used Three.js to make it visually responsive to the collected user data as we identified their carbon footprint as either better or worse than average human behaviors.",
+        fullDescription: "I worked with 3 people to create GreenJournal for a 36 hour hackathon, HackGT X, held at Georgia Tech. Our goal was to devise an easy, visual, and interactive way for people to track their impact on the environment through their carbon footprint. We did this with procedures and data we found on the Environmental Protection Agency website, which we used to calculate each of the top factors that affect one's carbon footprint. \nI was responsible for designing the initial wireframe layout and working on various parts of the user interface. I also handled user input by creating input fields using the NextUI component library and writing the algorithms necessary to calculate the carbon footprint. One of our team members designed the globe in Blender and used Three.js to make it visually responsive to the collected user data as we identified their carbon footprint as either better or worse than average human behaviors.",
         accentColor: "#18C964"
     },
     {
@@ -116,7 +116,7 @@ export const projects = [
         purpose: "Web Dev Club",
         github: "/roam",
         githubLink: "https://github.com/michelle692/roam",
-        fullDescription: "I worked with 5 people to create Roam as part of a semester-long project team. Our goal was to create an app that could be used for logging travel in a fun, interactive way. After a user types the location they want to add, we use the Google Maps Geocoding API to search for all of the likely location matches, and the one the user selects gets added to a 3D globe they can spin around and click on to see more details about the places they’ve been. \nA team member created a Figma design of the app, which I used to implement several frontend components (buttons, input fields, modals) and layouts for the app. I also wrote the frontend logic for toggling between modals, authentication, searching for/adding locations, editing notes, and maintaining persistent data using local storage and calls to the backend. For the backend, I helped to write calls for CRUD functionality for the travel history and wishlist documents.",
+        fullDescription: "I worked with 5 people to create Roam as part of a semester-long project team. Our goal was to create an app that could be used for logging travel in a fun, interactive way. After a user types the location they want to add, we use the Google Maps Geocoding API to search for all of the likely location matches, and the one the user selects gets added to a 3D globe they can spin around and click on to see more details about the places they've been. \nA team member created a Figma design of the app, which I used to implement several frontend components (buttons, input fields, modals) and layouts for the app. I also wrote the frontend logic for toggling between modals, authentication, searching for/adding locations, editing notes, and maintaining persistent data using local storage and calls to the backend. For the backend, I helped to write calls for CRUD functionality for the travel history and wishlist documents.",
         accentColor: "#a78bfa"
     },
     {
@@ -146,37 +146,8 @@ export const projects = [
         purpose: "Class Project",
         github: "/wrapped",
         githubLink: "https://github.com/alext101/wrapped",
-        fullDescription: "I worked with 5 people to create Wrapped for the class CS 2340: Objects and Design at Georgia Tech. Our Android app was designed as an alternative to Spotify Wrapped, which is only available once per year and lets Spotify users see various “year-in-review” statistics displayed in creative ways. \nOur users can choose a time range across their listening history, and we generate several slides (like an Instagram story) to show various aspects of their listening, such as their top tracks and artists. \nWe get this data from the Spotify Web API, and we use Firebase to store user data and handle authentication so the generated information is available from any device they log in to. We also integrate with the Spotify mobile player to play snippets of the user’s favorite music as they scroll through the slides.",
+        fullDescription: "I worked with 5 people to create Wrapped for the class CS 2340: Objects and Design at Georgia Tech. Our Android app was designed as an alternative to Spotify Wrapped, which is only available once per year and lets Spotify users see various “year-in-review” statistics displayed in creative ways. \nOur users can choose a time range across their listening history, and we generate several slides (like an Instagram story) to show various aspects of their listening, such as their top tracks and artists. \nWe get this data from the Spotify Web API, and we use Firebase to store user data and handle authentication so the generated information is available from any device they log in to. We also integrate with the Spotify mobile player to play snippets of the user's favorite music as they scroll through the slides.",
         accentColor: "#bf3f5c"
-    },
-    {
-        type: "Team Project",
-        scope: "Full Stack",
-        title: "College Scheduler",
-        description: "Tracker to help college students manage their schedules.",
-        root: "scheduler",
-        slideCount: 1,
-        role: "Developer",
-        stack: "Java, Android Studio",
-        purpose: "Class Project",
-        github: "/college-scheduler",
-        githubLink: "https://github.com/alext101/college-scheduler",
-        fullDescription: "I worked with 2 people to create the College Scheduler Android app for the CS2340 class. The app lets students add their classes, assignments, exams, and upcoming tasks to a visual list view. There is also functionality for sorting and filtering items. This project was a practice assignment, so there is no backend functionality for user accounts or storing their inputted data.",
-        accentColor: "#BDB2FF",
-        altTooltip: "Scheduler"
-    },
-    {
-        type: "Team Project",
-        scope: "Design",
-        title: "Skru",
-        description: "Web-based, paletted pixel art editor.",
-        root: "skru",
-        slideCount: 3,
-        role: "Designer",
-        stack: "Figma",
-        purpose: "Web Dev Club",
-        fullDescription: "I designed 3 screens for Skru, an online pixel editor that can be used from the browser. I designed planned features for arranging layers, choosing color palettes, transforming the canvas, and adding shapes/text to the pixel art. I based my designs on the Figma layout due to their similar purposes, since I wanted Skru’s interface to feel intuitive for designers who have used these types of programs before. \nSkru was a team project with the goal of creating a modern replacement for Usenti, a desktop bitmap editor. Although development of Skru was never finished, designing the visual interface of the application was my first experience with Figma and helped me learn a lot about how to use it.",
-        accentColor: "#FFC000"
     },
     {
         type: "Practice",
@@ -184,11 +155,11 @@ export const projects = [
         title: "Practice",
         description: "UI/UX mockup mini projects.",
         root: "practice",
-        slideCount: 3,
+        slideCount: 2,
         role: "Designer",
         stack: "Adobe Illustrator",
         purpose: "Practice",
-        fullDescription: "Lifts (image 1) is a UI/UX mockup for a mobile app that lets bodybuilders and powerlifters track their fitness journey. Users can start a workout and log individual lifts, such as bench press or deadlift, to track their numbers and progress over time. \nAgent (image 2) is a UI/UX mockup for an informational webpage for the game Valorant. I am not affiliated with Riot/Valorant, but I wanted to practice working with their design style of utilitarian, yet clean and appealing, graphics. I used official Valorant assets, as well their current website’s color scheme and similar fonts, to experiment with their design style. \nLink in Bio (image 3) was an experiment to design a link in bio website for myself to share important links using HTML/CSS.",
+        fullDescription: "Lifts (image 1) is a UI/UX mockup for a mobile app that lets bodybuilders and powerlifters track their fitness journey. Users can start a workout and log individual lifts, such as bench press or deadlift, to track their numbers and progress over time. \nAgent (image 2) is a UI/UX mockup for an informational webpage for the game Valorant. I am not affiliated with Riot/Valorant, but I wanted to practice working with their design style of utilitarian, yet clean and appealing, graphics. I used official Valorant assets, as well their current website's color scheme and similar fonts, to experiment with their design style.",
         accentColor: "#ffffff"
     }
 ]
