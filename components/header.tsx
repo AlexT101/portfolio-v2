@@ -8,7 +8,7 @@ export default function Header() {
             </h1>
             <p className="text-zinc-400 text-lg sm:text-xl mt-8"><span className="text-zinc-300 font-bold">Hi, I'm Alex!</span> I'm majoring in computer science at the Georgia Institute of Technology. I enjoy building websites using React, TypeScript, HTML, and CSS. I also specialize in UI and UX design.</p>
             <div className="text-zinc-400 text-xl sm:text-2xl flex flex-col gap-4 mt-8">
-                <p><span className="font-bold text-white">Resume:</span> <a className="hover:underline" href="https://drive.google.com/file/d/1WmNBNW5tS6ZugPjRx6H2PEglHoviP7r1/view?usp=sharing" target="_blank" rel="noopener noreferrer">/resume.pdf</a></p>
+                <p><span className="font-bold text-white">Resume:</span> <a className="hover:underline" href="/Alex_Thummalapalli_Resume.pdf" target="_blank" rel="noopener noreferrer">/resume.pdf</a></p>
                 <p><span className="font-bold text-white">Github:</span> <a className="hover:underline" href="https://github.com/alext101" target="_blank" rel="noopener noreferrer">/alext101</a></p>
                 <p><span className="font-bold text-white">LinkedIn:</span> <a className="hover:underline" href="https://www.linkedin.com/in/alext101/" target="_blank" rel="noopener noreferrer">/alext101</a></p>
             </div>
