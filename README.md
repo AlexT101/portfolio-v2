@@ -1,6 +1,6 @@
 # Portfolio
 
-This is my portfolio website, showcasing my frontend projects for hackathons, clubs, and other interests.
+My portfolio website, showcasing my frontend and full-stack projects.
 
 ## Technologies Used
 - React

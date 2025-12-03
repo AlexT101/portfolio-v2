@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL('https://alext.app/'),
   title: "AlexT Portfolio",
-  description: "CS student at Georgia Tech who enjoys design and development.",
+  description: "CS student at Georgia Tech specializing in frontend development.",
 };
 
 export default function RootLayout({

@@ -1,7 +1,6 @@
 import EmblaCarousel from './carousel/EmblaCarousel';
 import '../components/carousel/embla.css';
 
-//Function to add line breaks to the fullDescription string at \n
 function addLineBreak(str: string) {
     return str.split("\\n").map((substring, index) => {
         return (
@@ -12,9 +11,8 @@ function addLineBreak(str: string) {
     });
 }
 
-//Function to generate slide paths for the EmblaCarousel component based on the slideRoot and slideCount
 function generateSlidePaths(slideRoot: string, slideCount: number): string[] {
-    const slidePaths: string[] = [];
+    const slidePaths = [];
 
     for (let i = 1; i <= slideCount; i++) {
         slidePaths.push(`/${slideRoot}-screen${i}.png`);
