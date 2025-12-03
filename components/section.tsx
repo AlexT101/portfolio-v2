@@ -30,7 +30,6 @@ interface SectionProps {
     description: string;
     role: string;
     stack: string;
-    purpose: string;
     github?: string;
     githubLink?: string;
     site?: string;
@@ -41,10 +40,10 @@ interface SectionProps {
     accentColor: string;
 }
 
-export default function Section({ type, scope, title, description, role, stack, purpose, github, githubLink, site, siteLink, fullDescription, root, slideCount, accentColor }: SectionProps) {
+export default function Section({ type, scope, title, description, role, stack, github, githubLink, site, siteLink, fullDescription, root, slideCount, accentColor }: SectionProps) {
     return (
         <section id={root} className="w-full bg-black max-w-6xl p-6 sm:p-12 py-12 sm:py-20 border-x border-b border-zinc-800 flex flex-col">
-            <p className="text-[#898992] text-md sm:text-lg md:text-xl mb-4 uppercase">
+            <p className="text-zinc-400 text-md sm:text-lg md:text-xl mb-4 uppercase">
                 {type} &nbsp;•&nbsp; {scope}
             </p>
             <h2 style={{ borderLeft: `4px solid ${accentColor}` }} className="-ml-6 sm:-ml-12 pl-4 sm:pl-10 text-3xl sm:text-5xl font-semibold text-zinc-400">
@@ -56,7 +55,6 @@ export default function Section({ type, scope, title, description, role, stack, 
                 <div className="max-w-sm text-zinc-400 text-xl sm:text-2xl flex flex-col gap-8">
                     <p><span style={{ color: accentColor }} className="font-bold">Role:</span> {role}</p>
                     <p><span style={{ color: accentColor }} className="font-bold">Stack:</span> {stack}</p>
-                    <p><span style={{ color: accentColor }} className="font-bold">Purpose:</span> {purpose}</p>
                     {(github && githubLink) &&
                         <p><span style={{ color: accentColor }} className="font-bold">Github:</span> <a className="hover:underline" href={githubLink} target="_blank" rel="noopener noreferrer">{github}</a></p>
                     }
