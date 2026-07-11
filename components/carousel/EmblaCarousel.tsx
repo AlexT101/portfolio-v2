@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import Thumb from './EmblaCarouselThumbsButton';
@@ -12,7 +12,6 @@ interface EmblaCarouselProps {
 }
 
 const EmblaCarousel = ({ slides, options, priority = false }: EmblaCarouselProps) => {
-    const [selectedIndex, setSelectedIndex] = useState(0);
     const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
         containScroll: 'keepSnaps',
@@ -28,18 +27,27 @@ const EmblaCarousel = ({ slides, options, priority = false }: EmblaCarouselProps
         [emblaMainApi, emblaThumbsApi]
     );
 
-    const onSelect = useCallback(() => {
-        if (!emblaMainApi || !emblaThumbsApi) return;
-        setSelectedIndex(emblaMainApi.selectedScrollSnap());
-        emblaThumbsApi.scrollTo(emblaMainApi.selectedScrollSnap());
-    }, [emblaMainApi, emblaThumbsApi, setSelectedIndex]);
+    const subscribe = useCallback(
+        (onStoreChange: () => void) => {
+            if (!emblaMainApi) return () => {};
+            emblaMainApi.on('select', onStoreChange).on('reInit', onStoreChange);
+            return () => {
+                emblaMainApi.off('select', onStoreChange).off('reInit', onStoreChange);
+            };
+        },
+        [emblaMainApi]
+    );
+
+    const selectedIndex = useSyncExternalStore(
+        subscribe,
+        () => (emblaMainApi ? emblaMainApi.selectedScrollSnap() : 0),
+        () => 0
+    );
 
     useEffect(() => {
-        if (!emblaMainApi) return;
-        onSelect();
-
-        emblaMainApi.on('select', onSelect).on('reInit', onSelect);
-    }, [emblaMainApi, onSelect]);
+        if (!emblaThumbsApi) return;
+        emblaThumbsApi.scrollTo(selectedIndex);
+    }, [emblaThumbsApi, selectedIndex]);
 
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
