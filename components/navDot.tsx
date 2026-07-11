@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 
 interface NavDotProps {
@@ -17,11 +18,13 @@ export default function NavDot({
     scrollToSection,
     showTooltip,
 }: NavDotProps) {
+    const [hovered, setHovered] = useState(false);
+    // Pin the active dot's label open on wide screens; otherwise the tooltip
+    // follows hover/focus.
+    const pinned = Boolean(isActive && showTooltip);
+
     return (
-        <Tooltip
-            open={showTooltip && (isActive || undefined)}
-            onOpenChange={(open) => !isActive && open}
-        >
+        <Tooltip open={pinned || hovered} onOpenChange={setHovered}>
             <TooltipTrigger className="group p-2" onClick={() => scrollToSection(root)}>
                 <div
                     className={`w-4 h-4 rounded-full transition-transform duration-300 group-hover:scale-125 group-hover:brightness-125 cursor-pointer ${isActive && "scale-125"}`}
