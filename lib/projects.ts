@@ -10,8 +10,9 @@ export const projects = [
         stack: "Next.js, React, TypeScript, HTML, Tailwind CSS, Supabase",
         site: "musicharts.app",
         siteLink: "https://www.musicharts.app/",
-        fullDescription: "Musicharts is a solo project that I designed and built from scratch, to explore my deep interest in both music and data. Musicharts lets Spotify users visualize their listening habits with a personalized web dashboard that leverages thousands of hours of listening history to find patterns across tracks, albums, and artists. Musicharts combines data from the Spotify Web API and JSON streaming history logs to calculate listening retention, trends over time, popularity comparisons across songs, and related music suggestions. Musicharts is also designed to be performant and secure by storing user listening histories locally.",
-        accentColor: "#6366f1"
+        fullDescription:
+            "Musicharts is a solo project that I designed and built from scratch, to explore my deep interest in both music and data. Musicharts lets Spotify users visualize their listening habits with a personalized web dashboard that leverages thousands of hours of listening history to find patterns across tracks, albums, and artists. Musicharts combines data from the Spotify Web API and JSON streaming history logs to calculate listening retention, trends over time, popularity comparisons across songs, and related music suggestions. Musicharts is also designed to be performant and secure by storing user listening histories locally.",
+        accentColor: "#6366f1",
     },
     {
         type: "Team Project",
@@ -24,8 +25,9 @@ export const projects = [
         stack: "Next.js, React, TypeScript, HTML, Tailwind, CSS, Framer Motion",
         site: "bytefight.org",
         siteLink: "https://bytefight.vercel.app/",
-        fullDescription: "ByteFight is a month-long competition where participants at Georgia Tech write AI algorithms to compete in online, head-to-head minigames. I designed and built the landing page with Next.js and Framer motion, focusing on cohesive visuals and animations to make the page as engaging as possible and recruit new players to participate. I also redesigned the Electron frontend client, a downloadable playground for users to run matches locally, watch replays, and design maps. This was a complete UI overhaul to improve the user experience while maintaining the core underlying logic built by other team members.",
-        accentColor: "#FBBF24"
+        fullDescription:
+            "ByteFight is a month-long competition where participants at Georgia Tech write AI algorithms to compete in online, head-to-head minigames. I designed and built the landing page with Next.js and Framer motion, focusing on cohesive visuals and animations to make the page as engaging as possible and recruit new players to participate. I also redesigned the Electron frontend client, a downloadable playground for users to run matches locally, watch replays, and design maps. This was a complete UI overhaul to improve the user experience while maintaining the core underlying logic built by other team members.",
+        accentColor: "#FBBF24",
     },
     {
         type: "Team Project",
@@ -38,8 +40,9 @@ export const projects = [
         stack: "React Native, TypeScript, Expo, HTML, CSS, Supabase",
         github: "/rexbets",
         githubLink: "https://github.com/id-mustafa/rexbets",
-        fullDescription: "RexBets is a social betting app for live sports. Friends join lobbies and compete in minigames, trivia, and challenges during their favorite sporting events. This project was built for HackGT 12 with a team of four. As lead frontend developer, I designed and implemented most of the app screens in React Native, including animations, haptic feedback during minigames, and real-time social functionality for joining lobbies and competing against your friends.",
-        accentColor: "#CBA6F6"
+        fullDescription:
+            "RexBets is a social betting app for live sports. Friends join lobbies and compete in minigames, trivia, and challenges during their favorite sporting events. This project was built for HackGT 12 with a team of four. As lead frontend developer, I designed and implemented most of the app screens in React Native, including animations, haptic feedback during minigames, and real-time social functionality for joining lobbies and competing against your friends.",
+        accentColor: "#CBA6F6",
     },
     {
         type: "Team Project",
@@ -54,8 +57,9 @@ export const projects = [
         githubLink: "https://github.com/alext101/privacy-pilot",
         site: "devpost.com",
         siteLink: "https://devpost.com/software/privacy-extension-your-privacy-rights-at-a-glance",
-        fullDescription: "PrivacyPilot is a Chrome extension that finds and analyzes legal agreements for any website, so you know what you're signing up for. It evaluates privacy policies against GDPR and CCPA standards, presenting risk scores with supporting quotes. This project won the Google Track and Best Use of MongoDB prize at the AI ATL hackathon. I handled frontend development for my team, including setting up the Vite/React project, implementing link scraping to find relevant  legal pages, integrating API calls to our backend, and designing the sidebar UI for displaying scores and evidence.",
-        accentColor: "#4f81ff"
+        fullDescription:
+            "PrivacyPilot is a Chrome extension that finds and analyzes legal agreements for any website, so you know what you're signing up for. It evaluates privacy policies against GDPR and CCPA standards, presenting risk scores with supporting quotes. This project won the Google Track and Best Use of MongoDB prize at the AI ATL hackathon. I handled frontend development for my team, including setting up the Vite/React project, implementing link scraping to find relevant  legal pages, integrating API calls to our backend, and designing the sidebar UI for displaying scores and evidence.",
+        accentColor: "#4f81ff",
     },
     {
         type: "Team Project",
@@ -68,8 +72,9 @@ export const projects = [
         stack: "Next.js, React, TypeScript, HTML, Tailwind, CSS",
         site: "gtxr.club",
         siteLink: "https://gtxr.club",
-        fullDescription: "Georgia Tech Extended Reality (GTXR) is a virtual reality club at Georgia Tech that needed a landing page. I collaborated with one other developer to design and build a modern, fluid interface reflecting the club's focus on emerging XR technologies, with the goal of recruiting new members. The final product features subtle gradients, animations, and cohesive visuals, with a responsive interface for both mobile and web.",
-        accentColor: "#ae7ee0"
+        fullDescription:
+            "Georgia Tech Extended Reality (GTXR) is a virtual reality club at Georgia Tech that needed a landing page. I collaborated with one other developer to design and build a modern, fluid interface reflecting the club's focus on emerging XR technologies, with the goal of recruiting new members. The final product features subtle gradients, animations, and cohesive visuals, with a responsive interface for both mobile and web.",
+        accentColor: "#ae7ee0",
     },
     {
         type: "Team Project",
@@ -80,8 +85,9 @@ export const projects = [
         slideCount: 9,
         role: "Full-Stack Developer, Designer",
         stack: "Next.js, React, TypeScript, HTML, CSS, Supabase",
-        fullDescription: "ImmerseGT is a hackathon run by the GTXR club at Georgia Tech. I designed the UI and led frontend development for the landing page for ImmerseGT 2024, gaining over 10k site visits. I also built a user registration portal which facilitated 200+ signups. Unfortunately, the event was postponed to the 2025 hackathon season.",
-        accentColor: "#CC5DE8"
+        fullDescription:
+            "ImmerseGT is a hackathon run by the GTXR club at Georgia Tech. I designed the UI and led frontend development for the landing page for ImmerseGT 2024, gaining over 10k site visits. I also built a user registration portal which facilitated 200+ signups. Unfortunately, the event was postponed to the 2025 hackathon season.",
+        accentColor: "#CC5DE8",
     },
     {
         type: "Team Project",
@@ -94,8 +100,9 @@ export const projects = [
         stack: "Next.js, React, TypeScript, HTML, Tailwind CSS",
         github: "/green-journal",
         githubLink: "https://github.com/barrosodavid/greenjournal",
-        fullDescription: "GreenJournal is an interactive dashboard for tracking your carbon footprint. It uses data and calculations from the Environmental Protection Agency (EPA), along with user inputs, to calculate individualized user impact. This project was built at HackGT X with a team of four. I created the initial wireframe and worked on the frontend, developing components such as forms for collecting user data and widgets for showing statistics overviews. I also conducted research and wrote the calculation logic, based on EPA resources, for estimating user impact.",
-        accentColor: "#18C964"
+        fullDescription:
+            "GreenJournal is an interactive dashboard for tracking your carbon footprint. It uses data and calculations from the Environmental Protection Agency (EPA), along with user inputs, to calculate individualized user impact. This project was built at HackGT X with a team of four. I created the initial wireframe and worked on the frontend, developing components such as forms for collecting user data and widgets for showing statistics overviews. I also conducted research and wrote the calculation logic, based on EPA resources, for estimating user impact.",
+        accentColor: "#18C964",
     },
     {
         type: "Team Project",
@@ -108,8 +115,9 @@ export const projects = [
         stack: "React, JavaScript, HTML, CSS, Python, MongoDB",
         github: "/roam",
         githubLink: "https://github.com/michelle692/roam",
-        fullDescription: "Roam lets travelers log their travel experiences and plan future adventures on a spinning, interactive 3D globe. Built as part of the GT WebDev club over the course of a semester, this web app allows users to search locations via the Google Maps Geocoding API, add them to their personal globe, and attach notes. I mainly focused on frontend development, implementing components and layouts based on a Figma design. I wrote logic for navigation, authentication flows, and location management. I also contributed to backed API logic for travel history and wishlist documents, including MongoDB integration.",
-        accentColor: "#a78bfa"
+        fullDescription:
+            "Roam lets travelers log their travel experiences and plan future adventures on a spinning, interactive 3D globe. Built as part of the GT WebDev club over the course of a semester, this web app allows users to search locations via the Google Maps Geocoding API, add them to their personal globe, and attach notes. I mainly focused on frontend development, implementing components and layouts based on a Figma design. I wrote logic for navigation, authentication flows, and location management. I also contributed to backed API logic for travel history and wishlist documents, including MongoDB integration.",
+        accentColor: "#a78bfa",
     },
     {
         type: "Team Project",
@@ -122,8 +130,9 @@ export const projects = [
         stack: "Next.js, React, TypeScript, HTML, CSS, Python, MongoDB",
         github: "/market-match",
         githubLink: "https://github.com/alext101/market-match",
-        fullDescription: "MarketMatch is a stock discovery app that lets you swipe on your favorite stocks to build a tailored stock portfolio, based on the Tinder interface. Each stock card shows graphs, key metrics, news sentiment, and an integrated AI chatbot for answering questions based on company data. Each user's swipe history feeds a machine learning algorithm on the backend for refining future suggestions. As the only frontend developer, I owned the website interface, designing the layout and building a user preference form, animated stock info cards, and a portfolio overview page. My teammates built the backend APIs, leveraging IEX Cloud financial data and machine learning features to provide stock information and recommendations. This project was built for the Hacklytics 2024 hackathon.",
-        accentColor: "#3B5BDB"
+        fullDescription:
+            "MarketMatch is a stock discovery app that lets you swipe on your favorite stocks to build a tailored stock portfolio, based on the Tinder interface. Each stock card shows graphs, key metrics, news sentiment, and an integrated AI chatbot for answering questions based on company data. Each user's swipe history feeds a machine learning algorithm on the backend for refining future suggestions. As the only frontend developer, I owned the website interface, designing the layout and building a user preference form, animated stock info cards, and a portfolio overview page. My teammates built the backend APIs, leveraging IEX Cloud financial data and machine learning features to provide stock information and recommendations. This project was built for the Hacklytics 2024 hackathon.",
+        accentColor: "#3B5BDB",
     },
     {
         type: "Team Project",
@@ -136,8 +145,9 @@ export const projects = [
         stack: "Java, Android Studio, Firebase",
         github: "/wrapped",
         githubLink: "https://github.com/alext101/wrapped",
-        fullDescription: "Wrapped is an Android app for Spotify users to generate a visual breakdown of their listening history, built with five teammates for the CS 2340 class at Georgia Tech. Users select a time range and view Instagram-story-style slides of their top tracks, artists, and stats, with music snippets playing via Spotify's mobile player. This project leverages the Spotify Web API for music data and Firebase for authentication and cross-device sync.",
-        accentColor: "#bf3f5c"
+        fullDescription:
+            "Wrapped is an Android app for Spotify users to generate a visual breakdown of their listening history, built with five teammates for the CS 2340 class at Georgia Tech. Users select a time range and view Instagram-story-style slides of their top tracks, artists, and stats, with music snippets playing via Spotify's mobile player. This project leverages the Spotify Web API for music data and Firebase for authentication and cross-device sync.",
+        accentColor: "#bf3f5c",
     },
     {
         type: "Practice",
@@ -148,7 +158,8 @@ export const projects = [
         slideCount: 2,
         role: "Designer",
         stack: "Adobe Illustrator",
-        fullDescription: "Lifts (image 1) is a UI/UX mockup for a mobile app that lets bodybuilders and powerlifters track their fitness journey. Users can start a workout and log individual lifts, such as bench press or deadlift, to track their numbers and progress over time. \nAgent (image 2) is a UI/UX mockup for an informational webpage for the game Valorant. I am not affiliated with Riot/Valorant, but I wanted to practice working with their design style of utilitarian, yet clean and appealing, graphics. I used official Valorant assets, as well their current website's color scheme and similar fonts, to experiment with their design style.",
-        accentColor: "#ffffff"
-    }
-]
+        fullDescription:
+            "Lifts (image 1) is a UI/UX mockup for a mobile app that lets bodybuilders and powerlifters track their fitness journey. Users can start a workout and log individual lifts, such as bench press or deadlift, to track their numbers and progress over time. \nAgent (image 2) is a UI/UX mockup for an informational webpage for the game Valorant. I am not affiliated with Riot/Valorant, but I wanted to practice working with their design style of utilitarian, yet clean and appealing, graphics. I used official Valorant assets, as well their current website's color scheme and similar fonts, to experiment with their design style.",
+        accentColor: "#ffffff",
+    },
+];

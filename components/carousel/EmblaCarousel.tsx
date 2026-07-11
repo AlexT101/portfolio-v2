@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useEffect, useCallback, useRef, useSyncExternalStore } from 'react';
-import Image from 'next/image';
-import useEmblaCarousel from 'embla-carousel-react';
-import Thumb from './EmblaCarouselThumbsButton';
+import { useEffect, useCallback, useRef, useSyncExternalStore } from "react";
+import Image from "next/image";
+import useEmblaCarousel from "embla-carousel-react";
+import Thumb from "./EmblaCarouselThumbsButton";
 
 interface EmblaCarouselProps {
     slides: string[];
@@ -14,8 +14,8 @@ interface EmblaCarouselProps {
 const EmblaCarousel = ({ slides, options, priority = false }: EmblaCarouselProps) => {
     const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
-        containScroll: 'keepSnaps',
-        dragFree: true
+        containScroll: "keepSnaps",
+        dragFree: true,
     });
     const emblaNodeRef = useRef<HTMLDivElement>(null);
 
@@ -24,24 +24,24 @@ const EmblaCarousel = ({ slides, options, priority = false }: EmblaCarouselProps
             if (!emblaMainApi || !emblaThumbsApi) return;
             emblaMainApi.scrollTo(index);
         },
-        [emblaMainApi, emblaThumbsApi]
+        [emblaMainApi, emblaThumbsApi],
     );
 
     const subscribe = useCallback(
         (onStoreChange: () => void) => {
             if (!emblaMainApi) return () => {};
-            emblaMainApi.on('select', onStoreChange).on('reInit', onStoreChange);
+            emblaMainApi.on("select", onStoreChange).on("reInit", onStoreChange);
             return () => {
-                emblaMainApi.off('select', onStoreChange).off('reInit', onStoreChange);
+                emblaMainApi.off("select", onStoreChange).off("reInit", onStoreChange);
             };
         },
-        [emblaMainApi]
+        [emblaMainApi],
     );
 
     const selectedIndex = useSyncExternalStore(
         subscribe,
         () => (emblaMainApi ? emblaMainApi.selectedScrollSnap() : 0),
-        () => 0
+        () => 0,
     );
 
     useEffect(() => {
@@ -53,21 +53,21 @@ const EmblaCarousel = ({ slides, options, priority = false }: EmblaCarouselProps
         const handleKeyDown = (event: KeyboardEvent) => {
             if (!emblaMainApi) return;
 
-            if (event.key === 'ArrowLeft') {
+            if (event.key === "ArrowLeft") {
                 emblaMainApi.scrollPrev();
-            } else if (event.key === 'ArrowRight') {
+            } else if (event.key === "ArrowRight") {
                 emblaMainApi.scrollNext();
             }
         };
 
         const emblaNode = emblaNodeRef.current;
         if (emblaNode) {
-            emblaNode.addEventListener('keydown', handleKeyDown);
+            emblaNode.addEventListener("keydown", handleKeyDown);
         }
 
         return () => {
             if (emblaNode) {
-                emblaNode.removeEventListener('keydown', handleKeyDown);
+                emblaNode.removeEventListener("keydown", handleKeyDown);
             }
         };
     }, [emblaMainApi]);
@@ -87,15 +87,15 @@ const EmblaCarousel = ({ slides, options, priority = false }: EmblaCarouselProps
                                     height={1080}
                                     className="w-full h-auto"
                                     priority={isLcp}
-                                    loading={isLcp ? undefined : 'eager'}
-                                    fetchPriority={isLcp ? undefined : 'low'}
+                                    loading={isLcp ? undefined : "eager"}
+                                    fetchPriority={isLcp ? undefined : "low"}
                                 />
                             </div>
                         );
                     })}
                 </div>
             </div>
-            {slides.length > 1 &&
+            {slides.length > 1 && (
                 <div className="embla-thumbs">
                     <div className="embla-thumbs__viewport" ref={emblaThumbsRef}>
                         <div className="embla-thumbs__container">
@@ -110,7 +110,7 @@ const EmblaCarousel = ({ slides, options, priority = false }: EmblaCarouselProps
                         </div>
                     </div>
                 </div>
-            }
+            )}
         </div>
     );
 };

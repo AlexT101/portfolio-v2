@@ -3,6 +3,7 @@
 My portfolio website, showcasing my frontend and full-stack projects.
 
 ## Technologies Used
+
 - React
 - TypeScript
 - HTML

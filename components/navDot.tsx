@@ -9,17 +9,24 @@ interface NavDotProps {
     showTooltip?: boolean;
 }
 
-export default function NavDot({ root, title, accentColor, isActive, scrollToSection, showTooltip }: NavDotProps) {
+export default function NavDot({
+    root,
+    title,
+    accentColor,
+    isActive,
+    scrollToSection,
+    showTooltip,
+}: NavDotProps) {
     return (
-        <Tooltip open={showTooltip && (isActive || undefined)} onOpenChange={(open) => !isActive && open}>
-            <TooltipTrigger
-                className="group p-2"
-                onClick={() => scrollToSection(root)}
-            >
+        <Tooltip
+            open={showTooltip && (isActive || undefined)}
+            onOpenChange={(open) => !isActive && open}
+        >
+            <TooltipTrigger className="group p-2" onClick={() => scrollToSection(root)}>
                 <div
                     className={`w-4 h-4 rounded-full transition-transform duration-300 group-hover:scale-125 group-hover:brightness-125 cursor-pointer ${isActive && "scale-125"}`}
                     style={{
-                        backgroundColor: isActive ? accentColor : "#3F3F47"
+                        backgroundColor: isActive ? accentColor : "#3F3F47",
                     }}
                 />
             </TooltipTrigger>
