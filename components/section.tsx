@@ -36,9 +36,10 @@ interface SectionProps {
     root?: string;
     slideCount?: number;
     accentColor: string;
+    priority?: boolean;
 }
 
-export default function Section({ type, scope, title, description, role, stack, github, githubLink, site, siteLink, fullDescription, root, slideCount, accentColor }: SectionProps) {
+export default function Section({ type, scope, title, description, role, stack, github, githubLink, site, siteLink, fullDescription, root, slideCount, accentColor, priority }: SectionProps) {
     return (
         <section id={root} className="w-full bg-black max-w-6xl p-6 sm:p-12 py-12 sm:py-20 border-x border-b border-zinc-800 flex flex-col">
             <p className="text-zinc-400 text-md sm:text-lg md:text-xl mb-4 uppercase">
@@ -48,7 +49,7 @@ export default function Section({ type, scope, title, description, role, stack, 
                 <span style={{ color: accentColor }} className="font-bold">{title}. </span>
                 <span className="block sm:inline">{description}</span>
             </h2>
-            <EmblaCarousel slides={(root && slideCount) ? generateSlidePaths(root, slideCount) : ["placeholder.png"]} options={{}} />
+            <EmblaCarousel slides={(root && slideCount) ? generateSlidePaths(root, slideCount) : ["placeholder.png"]} options={{}} priority={priority} />
             <div className="w-full flex flex-col md:flex-row gap-10">
                 <div className="max-w-sm text-zinc-400 text-xl sm:text-2xl flex flex-col gap-8">
                     <p><span style={{ color: accentColor }} className="font-bold">Role:</span> {role}</p>

@@ -10,8 +10,8 @@ export default function Home() {
     <main className="w-full bg-black flex flex-col items-center">
       <Header />
 
-      {projects.map((project) => (
-        <Section key={project.root} {...project} />
+      {projects.map((project, index) => (
+        <Section key={project.root} {...project} priority={index === 0} />
       ))}
 
       <Footer />

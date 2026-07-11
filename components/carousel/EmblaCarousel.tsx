@@ -1,15 +1,17 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import Thumb from './EmblaCarouselThumbsButton';
 
 interface EmblaCarouselProps {
     slides: string[];
     options: any;
+    priority?: boolean;
 }
 
-const EmblaCarousel = ({ slides, options }: EmblaCarouselProps) => {
+const EmblaCarousel = ({ slides, options, priority = false }: EmblaCarouselProps) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
@@ -66,11 +68,23 @@ const EmblaCarousel = ({ slides, options }: EmblaCarouselProps) => {
         <div className="embla" ref={emblaNodeRef} tabIndex={0}>
             <div className="embla__viewport" ref={emblaMainRef}>
                 <div className="embla__container">
-                    {slides.map((image: string, index: number) => (
-                        <div className="embla__slide" key={index}>
-                            <img src={image} className="w-full" />
-                        </div>
-                    ))}
+                    {slides.map((image: string, index: number) => {
+                        const isLcp = priority && index === 0;
+                        return (
+                            <div className="embla__slide" key={index}>
+                                <Image
+                                    src={image}
+                                    alt=""
+                                    width={1896}
+                                    height={1080}
+                                    className="w-full h-auto"
+                                    priority={isLcp}
+                                    loading={isLcp ? undefined : 'eager'}
+                                    fetchPriority={isLcp ? undefined : 'low'}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
             {slides.length > 1 &&
