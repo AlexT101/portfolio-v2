@@ -26,7 +26,7 @@ export const projects = [
         site: "bytefight.org",
         siteLink: "https://bytefight.vercel.app/",
         fullDescription:
-            "ByteFight is a month-long competition where participants at Georgia Tech write AI algorithms to compete in online, head-to-head minigames. I designed and built the landing page with Next.js and Framer motion, focusing on cohesive visuals and animations to make the page as engaging as possible and recruit new players to participate. I also redesigned the Electron frontend client, a downloadable playground for users to run matches locally, watch replays, and design maps. This was a complete UI overhaul to improve the user experience while maintaining the core underlying logic built by other team members.",
+            "ByteFight is a month-long competition where Georgia Tech students write AI algorithms to compete in online, head-to-head minigames. I designed and built the landing page with Next.js and Framer motion, focusing on cohesive visuals and animations to make the page as engaging as possible and recruit new players to participate. I also redesigned the Electron frontend client, a downloadable playground for users to run matches locally, watch replays, and design maps. This was a complete UI overhaul to improve the user experience while maintaining the core underlying logic built by other team members.",
         accentColor: "#FBBF24",
     },
     {
@@ -146,7 +146,7 @@ export const projects = [
         github: "/wrapped",
         githubLink: "https://github.com/alext101/wrapped",
         fullDescription:
-            "Wrapped is an Android app for Spotify users to generate a visual breakdown of their listening history, built with five teammates for the CS 2340 class at Georgia Tech. Users select a time range and view Instagram-story-style slides of their top tracks, artists, and stats, with music snippets playing via Spotify's mobile player. This project leverages the Spotify Web API for music data and Firebase for authentication and cross-device sync.",
+            "Wrapped is an Android app for Spotify users to generate a visual breakdown of their listening history. Users select a time range and view Instagram-story-style slides of their top tracks, artists, and stats, with music snippets playing via Spotify's mobile player. This project leverages the Spotify Web API for music data and Firebase for authentication and cross-device sync.",
         accentColor: "#bf3f5c",
     },
     {

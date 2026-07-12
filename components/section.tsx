@@ -2,13 +2,26 @@ import EmblaCarousel from "./carousel/EmblaCarousel";
 import "../components/carousel/embla.css";
 
 function addLineBreak(str: string) {
-    return str.split("\\n").map((substring, index) => {
-        return (
-            <p key={index} className="mb-4">
-                {substring}
+    const [firstParagraph, ...restParagraphs] = str.split("\\n");
+    const [, intro, remainder] = firstParagraph.match(/^(.*?[.!?])\s+([\s\S]*)$/) ?? [
+        "",
+        firstParagraph,
+        "",
+    ];
+
+    return (
+        <>
+            <p className="mb-4">
+                <span className="font-semibold">{intro}</span>{" "}
+                <span className="font-light">{remainder}</span>
             </p>
-        );
-    });
+            {restParagraphs.map((substring, index) => (
+                <p key={index} className="mb-4 font-light">
+                    {substring}
+                </p>
+            ))}
+        </>
+    );
 }
 
 function generateSlidePaths(slideRoot: string, slideCount: number): string[] {
